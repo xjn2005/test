@@ -106,5 +106,5 @@ def browse_files(filepaths):
             logging.error(f'An error occurred: {e}')
             traceback.print_exc()
             progress_label.configure(text="An error occurred during the conversion process.")
-
+    threading.Thread(target=process_files).start()
     
